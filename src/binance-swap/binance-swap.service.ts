@@ -49,6 +49,6 @@ export class BinanceSwapService {
     );
 
     console.log('Order response:', orderResponse);
-    return orderResponse;
+    return { success: true, order: orderResponse };
   }
 }
