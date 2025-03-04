@@ -12,6 +12,6 @@ export class BinanceSwapController {
       return { success: false, error: 'Quantity is required' };
     }
 
-    return await this.binanceSwapService.executeSwap(quantity);
+    return await this.binanceSwapService.executeConvert(quantity);
   }
 }
