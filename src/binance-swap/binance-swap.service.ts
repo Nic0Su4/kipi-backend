@@ -26,6 +26,10 @@ export class BinanceSwapService {
       );
     }
 
+    if (!fromAmount) {
+      throw new HttpException('fromAmount is required', HttpStatus.BAD_REQUEST);
+    }
+
     const endpointQuote = '/sapi/v1/convert/getQuote';
     const fromAsset = 'WLD';
     const toAsset = 'USDT';
